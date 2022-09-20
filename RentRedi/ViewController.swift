@@ -15,10 +15,10 @@ class ViewController: UIViewController {
         
 
 //
-        let view = Bundle.main.loadNibNamed("ApartmentPopupView", owner: self, options: nil)
+//        let view = Bundle.main.loadNibNamed("ApartmentPopupView", owner: self, options: nil)
         
         
-        print("un")
+//        print("un")
         
     }
 

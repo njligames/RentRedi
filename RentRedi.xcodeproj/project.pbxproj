@@ -10,6 +10,13 @@
 		72C2A76F8464937FD02DA95D /* Pods_RentRedi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C86A335303072A7F7EFA00B /* Pods_RentRedi.framework */; };
 		AA61A25DBE1DD8E7B97E6BD0 /* Pods_RentRediTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA193AD68BCFE3DD4EBC646A /* Pods_RentRediTests.framework */; };
 		C13B898428D956CB00148A2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C13B898328D956CB00148A2E /* GoogleService-Info.plist */; };
+		C197F13228D963EF0072B99D /* DatabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13128D963EF0072B99D /* DatabaseFunctions.swift */; };
+		C197F13428D966890072B99D /* RentRediPlusHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13328D966890072B99D /* RentRediPlusHomeVC.swift */; };
+		C197F13628D967270072B99D /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13528D967270072B99D /* roundedButton.swift */; };
+		C197F13828D9681D0072B99D /* ApplyHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13728D9681C0072B99D /* ApplyHomeVC.swift */; };
+		C197F13A28D9689D0072B99D /* PrequalifyHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13928D9689D0072B99D /* PrequalifyHomeVC.swift */; };
+		C197F13C28D968F00072B99D /* ApplicationApartmentPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13B28D968F00072B99D /* ApplicationApartmentPhotoCell.swift */; };
+		C197F13E28D96A360072B99D /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13D28D96A360072B99D /* String+Capitalize.swift */; };
 		C1AEF0D128D9405700827D9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D028D9405700827D9D /* AppDelegate.swift */; };
 		C1AEF0D328D9405700827D9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D228D9405700827D9D /* SceneDelegate.swift */; };
 		C1AEF0D528D9405700827D9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D428D9405700827D9D /* ViewController.swift */; };
@@ -57,6 +64,13 @@
 		7C86A335303072A7F7EFA00B /* Pods_RentRedi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentRedi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		961E1A08219932DF72732FC5 /* Pods-RentRedi-RentRediUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentRedi-RentRediUITests.release.xcconfig"; path = "Target Support Files/Pods-RentRedi-RentRediUITests/Pods-RentRedi-RentRediUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C13B898328D956CB00148A2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C197F13128D963EF0072B99D /* DatabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFunctions.swift; sourceTree = "<group>"; };
+		C197F13328D966890072B99D /* RentRediPlusHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRediPlusHomeVC.swift; sourceTree = "<group>"; };
+		C197F13528D967270072B99D /* roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
+		C197F13728D9681C0072B99D /* ApplyHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyHomeVC.swift; sourceTree = "<group>"; };
+		C197F13928D9689D0072B99D /* PrequalifyHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrequalifyHomeVC.swift; sourceTree = "<group>"; };
+		C197F13B28D968F00072B99D /* ApplicationApartmentPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationApartmentPhotoCell.swift; sourceTree = "<group>"; };
+		C197F13D28D96A360072B99D /* String+Capitalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
 		C1AEF0CD28D9405700827D9D /* RentRedi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentRedi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AEF0D028D9405700827D9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1AEF0D228D9405700827D9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +136,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C197F13028D963D70072B99D /* stubs */ = {
+			isa = PBXGroup;
+			children = (
+				C197F13128D963EF0072B99D /* DatabaseFunctions.swift */,
+				C197F13B28D968F00072B99D /* ApplicationApartmentPhotoCell.swift */,
+				C197F13528D967270072B99D /* roundedButton.swift */,
+				C197F13328D966890072B99D /* RentRediPlusHomeVC.swift */,
+				C197F13728D9681C0072B99D /* ApplyHomeVC.swift */,
+				C197F13928D9689D0072B99D /* PrequalifyHomeVC.swift */,
+				C197F13D28D96A360072B99D /* String+Capitalize.swift */,
+			);
+			path = stubs;
+			sourceTree = "<group>";
+		};
 		C1AEF0C428D9405700827D9D = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +175,7 @@
 		C1AEF0CF28D9405700827D9D /* RentRedi */ = {
 			isa = PBXGroup;
 			children = (
+				C197F13028D963D70072B99D /* stubs */,
 				C13B898328D956CB00148A2E /* GoogleService-Info.plist */,
 				C1AEF10728D9452100827D9D /* ApartmentPopupView.swift */,
 				C1AEF10528D9452100827D9D /* ApartmentPopupView.xib */,
@@ -437,10 +466,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1AEF0D528D9405700827D9D /* ViewController.swift in Sources */,
+				C197F13A28D9689D0072B99D /* PrequalifyHomeVC.swift in Sources */,
 				C1AEF10E28D9452100827D9D /* TenantCardSubmission.swift in Sources */,
+				C197F13228D963EF0072B99D /* DatabaseFunctions.swift in Sources */,
+				C197F13828D9681D0072B99D /* ApplyHomeVC.swift in Sources */,
+				C197F13628D967270072B99D /* roundedButton.swift in Sources */,
 				C1AEF0D128D9405700827D9D /* AppDelegate.swift in Sources */,
+				C197F13428D966890072B99D /* RentRediPlusHomeVC.swift in Sources */,
 				C1AEF0D328D9405700827D9D /* SceneDelegate.swift in Sources */,
 				C1AEF11128D9452100827D9D /* ApartmentPopupView.swift in Sources */,
+				C197F13E28D96A360072B99D /* String+Capitalize.swift in Sources */,
+				C197F13C28D968F00072B99D /* ApplicationApartmentPhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

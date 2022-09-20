@@ -26,8 +26,11 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
         delegate?.hideTenantToDoAlert()
         //if tenant card is created
         if let tenantCardSubmission = self.delegate?.tenantCardSubmission, let submissionType = tenantCardSubmission.submissionType, let ownerID = tenantCardSubmission.ownerID, let propertyID = tenantCardSubmission.propertyID, let unitID = tenantCardSubmission.unitID, let renterID = tenantCardSubmission.renterID {
+            /*
+             James Folk - Had to comment this out....
                 //set status as accepted
             self.delegate?.ref.child("inviteTenant").child("\(ownerID)\(propertyID)\(unitID)\(renterID)_\(submissionType)").child("inviteStatus").setValue("accepted")
+             */
 
             //continue existing invite application
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -59,8 +62,11 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
     @IBAction func dismissApplicationTapped(_ sender: Any) {
         // if the variables necessary for updating the inviteStatus are present, then set the status as viewed
         if let tenantCardSubmission = self.delegate?.tenantCardSubmission, let submissionType = tenantCardSubmission.submissionType, let ownerID = tenantCardSubmission.ownerID, let propertyID = tenantCardSubmission.propertyID, let unitID = tenantCardSubmission.unitID, let renterID = tenantCardSubmission.renterID {
+            /*
+             James Folk - Had to comment this out....
                 //set status as viewed
             self.delegate?.ref.child("inviteTenant").child("\(ownerID)\(propertyID)\(unitID)\(renterID)_\(submissionType)").child("inviteStatus").setValue("viewed")
+             */
         }
         //hide the application popup
         delegate?.applicationPopup.isHidden = true

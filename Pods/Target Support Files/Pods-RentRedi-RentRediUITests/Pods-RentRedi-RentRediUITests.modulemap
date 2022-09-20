@@ -1,0 +1,6 @@
+framework module Pods_RentRedi_RentRediUITests {
+  umbrella header "Pods-RentRedi-RentRediUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

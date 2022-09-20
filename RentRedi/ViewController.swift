@@ -12,8 +12,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+
+//
+        let view = Bundle.main.loadNibNamed("ApartmentPopupView", owner: self, options: nil)
+        
+        
+        print("un")
+        
     }
 
 
 }
+
+
 

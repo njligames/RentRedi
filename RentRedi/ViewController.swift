@@ -8,17 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var testView: ApartmentPopupView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-
-//
-//        let view = Bundle.main.loadNibNamed("ApartmentPopupView", owner: self, options: nil)
-        
-        
-//        print("un")
         
     }
 

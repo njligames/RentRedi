@@ -21,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="365" height="456"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LM4-bd-HnP">
-                    <rect key="frame" x="24.5" y="84.5" width="282" height="278.5"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LM4-bd-HnP">
+                    <rect key="frame" x="0.0" y="44" width="365" height="412"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="MI5-dV-eSK">
                         <size key="itemSize" width="0.0" height="0.0"/>
@@ -33,12 +33,12 @@
                     <cells/>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SOu-UV-15h">
-                    <rect key="frame" x="108" y="325.5" width="115.5" height="26"/>
+                    <rect key="frame" x="125" y="430" width="115.5" height="26"/>
                     <color key="pageIndicatorTintColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="currentPageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </pageControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrT-b4-0Id" userLabel="Page Number">
-                    <rect key="frame" x="240" y="319.5" width="56.5" height="22"/>
+                    <rect key="frame" x="282" y="413" width="73" height="33"/>
                     <color key="backgroundColor" white="0.0" alpha="0.4243325745" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,11 +54,15 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="lrT-b4-0Id" firstAttribute="bottom" secondItem="LM4-bd-HnP" secondAttribute="bottom" constant="-10" id="Aqp-Ng-s20"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LM4-bd-HnP" secondAttribute="trailing" id="E6E-RP-5zb"/>
                 <constraint firstItem="lrT-b4-0Id" firstAttribute="width" secondItem="LM4-bd-HnP" secondAttribute="width" multiplier="0.2" id="J2A-y0-Ptr"/>
                 <constraint firstItem="SOu-UV-15h" firstAttribute="bottom" secondItem="LM4-bd-HnP" secondAttribute="bottom" id="LnG-ij-tPU"/>
+                <constraint firstItem="LM4-bd-HnP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PiV-o1-Lmh"/>
                 <constraint firstItem="lrT-b4-0Id" firstAttribute="trailing" secondItem="LM4-bd-HnP" secondAttribute="trailing" constant="-10" id="Qn7-hs-dEM"/>
                 <constraint firstItem="lrT-b4-0Id" firstAttribute="height" secondItem="LM4-bd-HnP" secondAttribute="height" multiplier="0.08" id="hY1-b5-WjH"/>
                 <constraint firstItem="SOu-UV-15h" firstAttribute="centerX" secondItem="LM4-bd-HnP" secondAttribute="centerX" id="tx1-Uz-Dhn"/>
+                <constraint firstItem="LM4-bd-HnP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vwY-Uu-Cbt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LM4-bd-HnP" secondAttribute="bottom" id="zh3-JG-ibN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="105.07246376811595" y="6.0267857142857144"/>

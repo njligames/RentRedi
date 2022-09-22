@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet var testView: ApartmentPopupView!
+class ViewControllerDecoupled: UIViewController {
+    @IBOutlet var testView: ApartmentPopupViewDecoupled!
     
     override func viewDidLoad() {
         super.viewDidLoad()

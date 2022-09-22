@@ -2,9 +2,10 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
-    private let apartmentPhotoReuseIdentifier = "apartmentPhotoCell"
+class ApartmentPopupViewDecoupled: UIView {//}, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    @IBOutlet weak var carouselView: PhotoCarouselCollectionView!
+    
+//    private let apartmentPhotoReuseIdentifier = "apartmentPhotoCell"
     weak var delegate: RentRediPlusHomeVC?
     var applicationPhotosUrls = [URL]()
     var tenantCardSubmission: TenantCardSubmission?
@@ -15,10 +16,10 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var applicationPopupStreetAddress: UILabel!
     @IBOutlet weak var applicationPopupRentAmount: UILabel!
     @IBOutlet weak var applicationPopupRegion: UILabel!
-    @IBOutlet weak var applicationPopupPhotos: UICollectionView!
+//    @IBOutlet weak var applicationPopupPhotos: UICollectionView!
     @IBOutlet weak var applicationInviteImage: UIImageView!
-    @IBOutlet weak var applicationPopupPageNumber: UILabel!
-    @IBOutlet weak var applicationPhotoDots: UIPageControl!
+//    @IBOutlet weak var applicationPopupPageNumber: UILabel!
+//    @IBOutlet weak var applicationPhotoDots: UIPageControl!
     @IBOutlet weak var startApplicationButton: roundedButton!
     @IBAction func startApplicationTapped(_ sender: Any) {
         //hide popups
@@ -26,8 +27,11 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
         delegate?.hideTenantToDoAlert()
         //if tenant card is created
         if let tenantCardSubmission = self.delegate?.tenantCardSubmission, let submissionType = tenantCardSubmission.submissionType, let ownerID = tenantCardSubmission.ownerID, let propertyID = tenantCardSubmission.propertyID, let unitID = tenantCardSubmission.unitID, let renterID = tenantCardSubmission.renterID {
+            /*
+             James Folk - Had to comment this out....
                 //set status as accepted
-//            self.delegate?.ref.child("inviteTenant").child("\(ownerID)\(propertyID)\(unitID)\(renterID)_\(submissionType)").child("inviteStatus").setValue("accepted")
+            self.delegate?.ref.child("inviteTenant").child("\(ownerID)\(propertyID)\(unitID)\(renterID)_\(submissionType)").child("inviteStatus").setValue("accepted")
+             */
 
             //continue existing invite application
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -59,14 +63,17 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
     @IBAction func dismissApplicationTapped(_ sender: Any) {
         // if the variables necessary for updating the inviteStatus are present, then set the status as viewed
         if let tenantCardSubmission = self.delegate?.tenantCardSubmission, let submissionType = tenantCardSubmission.submissionType, let ownerID = tenantCardSubmission.ownerID, let propertyID = tenantCardSubmission.propertyID, let unitID = tenantCardSubmission.unitID, let renterID = tenantCardSubmission.renterID {
+            /*
+             James Folk - Had to comment this out....
                 //set status as viewed
-//            self.delegate?.ref.child("inviteTenant").child("\(ownerID)\(propertyID)\(unitID)\(renterID)_\(submissionType)").child("inviteStatus").setValue("viewed")
+            self.delegate?.ref.child("inviteTenant").child("\(ownerID)\(propertyID)\(unitID)\(renterID)_\(submissionType)").child("inviteStatus").setValue("viewed")
+             */
         }
         //hide the application popup
         delegate?.applicationPopup.isHidden = true
     }
 
-    let nibName = "ApartmentPopupView"
+    let nibName = "ApartmentPopupViewDecoupled"
 
     //functions for initializing this nib
 
@@ -75,9 +82,9 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
         super.init(coder: aDecoder)
         commonInit()
         //set the collection delegate and datasource of the photos to self(update collection view when Apartment Popup view data updates)
-        applicationPopupPhotos.delegate = self
-        applicationPopupPhotos.dataSource = self
-        applicationPopupPhotos.register(ApplicationApartmentPhotoCell.self, forCellWithReuseIdentifier: apartmentPhotoReuseIdentifier)
+//        applicationPopupPhotos.delegate = self
+//        applicationPopupPhotos.dataSource = self
+//        applicationPopupPhotos.register(ApplicationApartmentPhotoCell.self, forCellWithReuseIdentifier: apartmentPhotoReuseIdentifier)
     }
     //override the default initializer
     override init(frame: CGRect) {
@@ -88,83 +95,84 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
 
     //custom initializer
     func commonInit() {
+//        populateApplicationPhotosUrls()
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
         self.addSubview(view)
     }
-    //load view from nib named ApartmentPopupView
+    //load view from nib named ApartmentPopupViewDecoupled
     func loadViewFromNib() -> UIView? {
         let nib = UINib(nibName: nibName, bundle: nil)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
-    //function for handling when user has scrolled in the scrollview, update the UI to let user know what photo they are on
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //if the scrollview is application popup photos (no other scrollview is available)
-        if scrollView == applicationPopupPhotos {
-            //get page number of cell in view
-            let pageNumber = Int((applicationPopupPhotos.contentOffset.x / applicationPopupPhotos.frame.width).rounded(.toNearestOrAwayFromZero))
-            applicationPhotoDots.currentPage = pageNumber
-            // set page number
-            applicationPopupPageNumber.text = "\(pageNumber + 1) of \(applicationPhotosUrls.count)"
+//    //function for handling when user has scrolled in the scrollview, update the UI to let user know what photo they are on
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        //if the scrollview is application popup photos (no other scrollview is available)
+////        if scrollView == applicationPopupPhotos {
+////            //get page number of cell in view
+////            let pageNumber = Int((applicationPopupPhotos.contentOffset.x / applicationPopupPhotos.frame.width).rounded(.toNearestOrAwayFromZero))
+////            applicationPhotoDots.currentPage = pageNumber
+////            // set page number
+////            applicationPopupPageNumber.text = "\(pageNumber + 1) of \(applicationPhotosUrls.count)"
+////
+////        }
+//    }
+//    // Set size of collection view items
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        //if the collection view is application popup photos (no other collection view is available)
+////        if collectionView == applicationPopupPhotos {
+////            // Set up CollectionView
+////            let width = collectionView.frame.width
+////            let height = collectionView.frame.height
+////            //Set size of collection view item to size of collectionView to take entire space
+////            return CGSize(width: width, height: height)
+////        }
+//        //Set default size
+//        return CGSize(width: 0, height: 0)
+//    }
+//    // Determine how many sections there are in collectionView, in this case 1
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        //application popup photos has 1 section
+//        return 1
+//    }
+//    // Determine how many items there are in collectionView
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        //if the collection view is application popup photos (no other collection view is available)
+////        if collectionView == applicationPopupPhotos {
+////            //set the number of items equal to the number of photos
+////            applicationPhotoDots.numberOfPages = applicationPhotosUrls.count
+////            return applicationPhotosUrls.count
+////        }
+//        return 0
+//    }
+//    // Determine what kind of cell is in collection view
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        //if the collection view is application popup photos (no other collection view is available)
+////        if collectionView == applicationPopupPhotos {
+////            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: apartmentPhotoReuseIdentifier, for: indexPath) as! ApplicationApartmentPhotoCell
+////
+////            let url = applicationPhotosUrls[indexPath.row]
+////            //if there is a photo that can be decoded from the data of the url
+////            let data = try? Data(contentsOf: url)
+////            //set imageview photo to corresponding apartment photo
+////            if let imageData = data {
+////                cell.apartmentPhoto.image = UIImage(data: imageData)
+////                //move the cell the the front of user's screen
+////                cell.bringSubviewToFront(cell.apartmentPhoto)
+////            }
+////
+////            // Configure the cell
+////            return cell
+////        }
+//        //return application apartment photo cell
+//        return collectionView.dequeueReusableCell(withReuseIdentifier: apartmentPhotoReuseIdentifier, for: indexPath) as! ApplicationApartmentPhotoCell
+//    }
 
-        }
-    }
-    // Set size of collection view items
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //if the collection view is application popup photos (no other collection view is available)
-        if collectionView == applicationPopupPhotos {
-            // Set up CollectionView
-            let width = collectionView.frame.width
-            let height = collectionView.frame.height
-            //Set size of collection view item to size of collectionView to take entire space
-            return CGSize(width: width, height: height)
-        }
-        //Set default size
-        return CGSize(width: 0, height: 0)
-    }
-    // Determine how many sections there are in collectionView, in this case 1
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        //application popup photos has 1 section
-        return 1
-    }
-    // Determine how many items there are in collectionView
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //if the collection view is application popup photos (no other collection view is available)
-        if collectionView == applicationPopupPhotos {
-            //set the number of items equal to the number of photos
-            applicationPhotoDots.numberOfPages = applicationPhotosUrls.count
-            return applicationPhotosUrls.count
-        }
-        return 0
-    }
-    // Determine what kind of cell is in collection view
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //if the collection view is application popup photos (no other collection view is available)
-        if collectionView == applicationPopupPhotos {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: apartmentPhotoReuseIdentifier, for: indexPath) as! ApplicationApartmentPhotoCell
-
-            let url = applicationPhotosUrls[indexPath.row]
-            //if there is a photo that can be decoded from the data of the url
-            let data = try? Data(contentsOf: url)
-            //set imageview photo to corresponding apartment photo
-            if let imageData = data {
-                cell.apartmentPhoto.image = UIImage(data: imageData)
-                //move the cell the the front of user's screen
-                cell.bringSubviewToFront(cell.apartmentPhoto)
-            }
-
-            // Configure the cell
-            return cell
-        }
-        //return application apartment photo cell
-        return collectionView.dequeueReusableCell(withReuseIdentifier: apartmentPhotoReuseIdentifier, for: indexPath) as! ApplicationApartmentPhotoCell
-    }
-
-    //When a collection view item is clicked
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //do nothing because we dont need anything to be done when an apartment photo is clicked
-        return
-    }
+//    //When a collection view item is clicked
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        //do nothing because we dont need anything to be done when an apartment photo is clicked
+//        return
+//    }
 
 
     func updateViews() {
@@ -299,13 +307,13 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
             //Run on main thread
             DispatchQueue.main.async {
                 // show apartment photos collection view, dots and reload data
-                self.applicationPhotoDots.isHidden = false
-                self.applicationPopupPhotos.isHidden = false
+//                self.applicationPhotoDots.isHidden = false
+//                self.applicationPopupPhotos.isHidden = false
                 self.applicationPopupRegion.isHidden = false
                 //show photos in main thread by reloading data
-                self.applicationPopupPhotos.reloadData()
+//                self.applicationPopupPhotos.reloadData()
                 //set page number to 1
-                self.applicationPopupPageNumber.text = "1 of \(self.applicationPhotosUrls.count)"
+//                self.applicationPopupPageNumber.text = "1 of \(self.applicationPhotosUrls.count)"
             }
         }
     }
@@ -316,10 +324,10 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
             //show default image
             self.applicationInviteImage.isHidden = false
             //hide photo dots and unit/property photos
-            self.applicationPhotoDots.isHidden = true
-            self.applicationPopupPhotos.isHidden = true
+//            self.applicationPhotoDots.isHidden = true
+//            self.applicationPopupPhotos.isHidden = true
             //hide page number since we are showing default image
-            self.applicationPopupPageNumber.isHidden = true
+//            self.applicationPopupPageNumber.isHidden = true
             //set default message
             self.applicationPopupStreetAddress.text = "You have been invited to \(self.tenantCardSubmission?.verb.capitalizeFirstLetter() ?? "Apply") to \(self.tenantCardSubmission?.fullAddress ?? "an unknown address")"
             //hide region (since region/state is already included in the `fullAddress` in the `applicationPopupStreetAddress.text`)

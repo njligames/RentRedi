@@ -17,6 +17,12 @@
 		C197F13A28D9689D0072B99D /* PrequalifyHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13928D9689D0072B99D /* PrequalifyHomeVC.swift */; };
 		C197F13C28D968F00072B99D /* ApplicationApartmentPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13B28D968F00072B99D /* ApplicationApartmentPhotoCell.swift */; };
 		C197F13E28D96A360072B99D /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13D28D96A360072B99D /* String+Capitalize.swift */; };
+		C19E24BD28DBAA6600CBAEDB /* PhotoCarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E24BC28DBAA6600CBAEDB /* PhotoCarouselCollectionView.swift */; };
+		C19E24BF28DBAA7D00CBAEDB /* PhotoCarouselCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E24BE28DBAA7D00CBAEDB /* PhotoCarouselCollectionView.xib */; };
+		C19E24C228DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E24C028DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.swift */; };
+		C19E24C328DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E24C128DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.xib */; };
+		C19E24C628DC02EA00CBAEDB /* ApartmentPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E24C428DC02EA00CBAEDB /* ApartmentPopupView.swift */; };
+		C19E24C728DC02EA00CBAEDB /* ApartmentPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E24C528DC02EA00CBAEDB /* ApartmentPopupView.xib */; };
 		C1AEF0D128D9405700827D9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D028D9405700827D9D /* AppDelegate.swift */; };
 		C1AEF0D328D9405700827D9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D228D9405700827D9D /* SceneDelegate.swift */; };
 		C1AEF0D528D9405700827D9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D428D9405700827D9D /* ViewController.swift */; };
@@ -29,15 +35,9 @@
 		C1AEF10828D9452100827D9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C1AEF10428D9452100827D9D /* README.md */; };
 		C1AEF10928D9452100827D9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C1AEF10428D9452100827D9D /* README.md */; };
 		C1AEF10A28D9452100827D9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C1AEF10428D9452100827D9D /* README.md */; };
-		C1AEF10B28D9452100827D9D /* ApartmentPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1AEF10528D9452100827D9D /* ApartmentPopupView.xib */; };
-		C1AEF10C28D9452100827D9D /* ApartmentPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1AEF10528D9452100827D9D /* ApartmentPopupView.xib */; };
-		C1AEF10D28D9452100827D9D /* ApartmentPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1AEF10528D9452100827D9D /* ApartmentPopupView.xib */; };
 		C1AEF10E28D9452100827D9D /* TenantCardSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF10628D9452100827D9D /* TenantCardSubmission.swift */; };
 		C1AEF10F28D9452100827D9D /* TenantCardSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF10628D9452100827D9D /* TenantCardSubmission.swift */; };
 		C1AEF11028D9452100827D9D /* TenantCardSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF10628D9452100827D9D /* TenantCardSubmission.swift */; };
-		C1AEF11128D9452100827D9D /* ApartmentPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF10728D9452100827D9D /* ApartmentPopupView.swift */; };
-		C1AEF11228D9452100827D9D /* ApartmentPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF10728D9452100827D9D /* ApartmentPopupView.swift */; };
-		C1AEF11328D9452100827D9D /* ApartmentPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF10728D9452100827D9D /* ApartmentPopupView.swift */; };
 		D487641946331FDA2447828D /* Pods_RentRedi_RentRediUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECA7AA3C8E4642E7A045847 /* Pods_RentRedi_RentRediUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +71,12 @@
 		C197F13928D9689D0072B99D /* PrequalifyHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrequalifyHomeVC.swift; sourceTree = "<group>"; };
 		C197F13B28D968F00072B99D /* ApplicationApartmentPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationApartmentPhotoCell.swift; sourceTree = "<group>"; };
 		C197F13D28D96A360072B99D /* String+Capitalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
+		C19E24BC28DBAA6600CBAEDB /* PhotoCarouselCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCarouselCollectionView.swift; sourceTree = "<group>"; };
+		C19E24BE28DBAA7D00CBAEDB /* PhotoCarouselCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCarouselCollectionView.xib; sourceTree = "<group>"; };
+		C19E24C028DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApartmentPopupViewDecoupled.swift; sourceTree = "<group>"; };
+		C19E24C128DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApartmentPopupViewDecoupled.xib; sourceTree = "<group>"; };
+		C19E24C428DC02EA00CBAEDB /* ApartmentPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApartmentPopupView.swift; sourceTree = "<group>"; };
+		C19E24C528DC02EA00CBAEDB /* ApartmentPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApartmentPopupView.xib; sourceTree = "<group>"; };
 		C1AEF0CD28D9405700827D9D /* RentRedi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentRedi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AEF0D028D9405700827D9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1AEF0D228D9405700827D9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,9 +91,7 @@
 		C1AEF0F128D9405800827D9D /* RentRediUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRediUITests.swift; sourceTree = "<group>"; };
 		C1AEF0F328D9405800827D9D /* RentRediUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRediUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C1AEF10428D9452100827D9D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C1AEF10528D9452100827D9D /* ApartmentPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApartmentPopupView.xib; sourceTree = "<group>"; };
 		C1AEF10628D9452100827D9D /* TenantCardSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TenantCardSubmission.swift; sourceTree = "<group>"; };
-		C1AEF10728D9452100827D9D /* ApartmentPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApartmentPopupView.swift; sourceTree = "<group>"; };
 		C83863A660CFF762D5F8AB64 /* Pods-RentRedi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentRedi.release.xcconfig"; path = "Target Support Files/Pods-RentRedi/Pods-RentRedi.release.xcconfig"; sourceTree = "<group>"; };
 		CA193AD68BCFE3DD4EBC646A /* Pods_RentRediTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentRediTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06C621DC122EB2051F74AE6 /* Pods-RentRedi-RentRediUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentRedi-RentRediUITests.debug.xcconfig"; path = "Target Support Files/Pods-RentRedi-RentRediUITests/Pods-RentRedi-RentRediUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,8 +181,10 @@
 			children = (
 				C197F13028D963D70072B99D /* stubs */,
 				C13B898328D956CB00148A2E /* GoogleService-Info.plist */,
-				C1AEF10728D9452100827D9D /* ApartmentPopupView.swift */,
-				C1AEF10528D9452100827D9D /* ApartmentPopupView.xib */,
+				C19E24C428DC02EA00CBAEDB /* ApartmentPopupView.swift */,
+				C19E24C528DC02EA00CBAEDB /* ApartmentPopupView.xib */,
+				C19E24C028DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.swift */,
+				C19E24C128DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.xib */,
 				C1AEF10428D9452100827D9D /* README.md */,
 				C1AEF10628D9452100827D9D /* TenantCardSubmission.swift */,
 				C1AEF0D028D9405700827D9D /* AppDelegate.swift */,
@@ -188,6 +194,8 @@
 				C1AEF0D928D9405800827D9D /* Assets.xcassets */,
 				C1AEF0DB28D9405800827D9D /* LaunchScreen.storyboard */,
 				C1AEF0DE28D9405800827D9D /* Info.plist */,
+				C19E24BC28DBAA6600CBAEDB /* PhotoCarouselCollectionView.swift */,
+				C19E24BE28DBAA7D00CBAEDB /* PhotoCarouselCollectionView.xib */,
 			);
 			path = RentRedi;
 			sourceTree = "<group>";
@@ -330,10 +338,12 @@
 			files = (
 				C1AEF0DD28D9405800827D9D /* LaunchScreen.storyboard in Resources */,
 				C1AEF10828D9452100827D9D /* README.md in Resources */,
+				C19E24C728DC02EA00CBAEDB /* ApartmentPopupView.xib in Resources */,
 				C1AEF0DA28D9405800827D9D /* Assets.xcassets in Resources */,
-				C1AEF10B28D9452100827D9D /* ApartmentPopupView.xib in Resources */,
 				C1AEF0D828D9405700827D9D /* Main.storyboard in Resources */,
+				C19E24C328DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.xib in Resources */,
 				C13B898428D956CB00148A2E /* GoogleService-Info.plist in Resources */,
+				C19E24BF28DBAA7D00CBAEDB /* PhotoCarouselCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +352,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1AEF10928D9452100827D9D /* README.md in Resources */,
-				C1AEF10C28D9452100827D9D /* ApartmentPopupView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1AEF10A28D9452100827D9D /* README.md in Resources */,
-				C1AEF10D28D9452100827D9D /* ApartmentPopupView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,16 +473,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19E24C628DC02EA00CBAEDB /* ApartmentPopupView.swift in Sources */,
 				C1AEF0D528D9405700827D9D /* ViewController.swift in Sources */,
 				C197F13A28D9689D0072B99D /* PrequalifyHomeVC.swift in Sources */,
 				C1AEF10E28D9452100827D9D /* TenantCardSubmission.swift in Sources */,
+				C19E24C228DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.swift in Sources */,
 				C197F13228D963EF0072B99D /* DatabaseFunctions.swift in Sources */,
 				C197F13828D9681D0072B99D /* ApplyHomeVC.swift in Sources */,
 				C197F13628D967270072B99D /* roundedButton.swift in Sources */,
 				C1AEF0D128D9405700827D9D /* AppDelegate.swift in Sources */,
 				C197F13428D966890072B99D /* RentRediPlusHomeVC.swift in Sources */,
 				C1AEF0D328D9405700827D9D /* SceneDelegate.swift in Sources */,
-				C1AEF11128D9452100827D9D /* ApartmentPopupView.swift in Sources */,
+				C19E24BD28DBAA6600CBAEDB /* PhotoCarouselCollectionView.swift in Sources */,
 				C197F13E28D96A360072B99D /* String+Capitalize.swift in Sources */,
 				C197F13C28D968F00072B99D /* ApplicationApartmentPhotoCell.swift in Sources */,
 			);
@@ -486,7 +496,6 @@
 			files = (
 				C1AEF0E828D9405800827D9D /* RentRediTests.swift in Sources */,
 				C1AEF10F28D9452100827D9D /* TenantCardSubmission.swift in Sources */,
-				C1AEF11228D9452100827D9D /* ApartmentPopupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +505,6 @@
 			files = (
 				C1AEF0F428D9405800827D9D /* RentRediUITestsLaunchTests.swift in Sources */,
 				C1AEF0F228D9405800827D9D /* RentRediUITests.swift in Sources */,
-				C1AEF11328D9452100827D9D /* ApartmentPopupView.swift in Sources */,
 				C1AEF11028D9452100827D9D /* TenantCardSubmission.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

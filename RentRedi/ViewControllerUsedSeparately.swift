@@ -8,9 +8,8 @@
 import UIKit
 
 class ViewControllerUsedSeparately: UIViewController {
-    
-    
     @IBOutlet var photoCarouselCollectionView: PhotoCarouselCollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

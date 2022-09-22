@@ -40,6 +40,18 @@ class PhotoCarouselCollectionView: UIView {
         applicationPopupPhotos.delegate = self
         applicationPopupPhotos.dataSource = self
         applicationPopupPhotos.register(ApplicationApartmentPhotoCell.self, forCellWithReuseIdentifier: apartmentPhotoReuseIdentifier)
+        
+        applicationPopupPageNumber.text = "\(0 + 1) of \(applicationPhotosUrls.count)"
+    }
+    
+    func appendPhotoUrl(_ downloadURL:URL){
+        self.applicationPhotosUrls.append(downloadURL)
+    }
+    func numberOfPhotos()->Int {
+        return self.applicationPhotosUrls.count
+    }
+    func clearPhotos() {
+        self.applicationPhotosUrls = []
     }
 
 }
@@ -139,5 +151,39 @@ extension PhotoCarouselCollectionView: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //do nothing because we dont need anything to be done when an apartment photo is clicked
         return
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.applicationPopupPhotos.scrollToNearestVisibleCollectionViewCell()
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            self.applicationPopupPhotos.scrollToNearestVisibleCollectionViewCell()
+        }
+    }
+}
+
+extension UICollectionView {
+    func scrollToNearestVisibleCollectionViewCell() {
+        self.decelerationRate = UIScrollView.DecelerationRate.fast
+        let visibleCenterPositionOfScrollView = Float(self.contentOffset.x + (self.bounds.size.width / 2))
+        var closestCellIndex = -1
+        var closestDistance: Float = .greatestFiniteMagnitude
+        for i in 0..<self.visibleCells.count {
+            let cell = self.visibleCells[i]
+            let cellWidth = cell.bounds.size.width
+            let cellCenter = Float(cell.frame.origin.x + cellWidth / 2)
+
+            // Now calculate closest cell
+            let distance: Float = fabsf(visibleCenterPositionOfScrollView - cellCenter)
+            if distance < closestDistance {
+                closestDistance = distance
+                closestCellIndex = self.indexPath(for: cell)!.row
+            }
+        }
+        if closestCellIndex != -1 {
+            self.scrollToItem(at: IndexPath(row: closestCellIndex, section: 0), at: .centeredHorizontally, animated: true)
+        }
     }
 }

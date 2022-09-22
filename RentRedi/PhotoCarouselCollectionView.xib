@@ -38,7 +38,7 @@
                     <color key="currentPageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </pageControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrT-b4-0Id" userLabel="Page Number">
-                    <rect key="frame" x="282" y="413" width="73" height="33"/>
+                    <rect key="frame" x="227.5" y="393" width="127.5" height="33"/>
                     <color key="backgroundColor" white="0.0" alpha="0.4243325745" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,9 +53,9 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="lrT-b4-0Id" firstAttribute="bottom" secondItem="LM4-bd-HnP" secondAttribute="bottom" constant="-10" id="Aqp-Ng-s20"/>
+                <constraint firstItem="lrT-b4-0Id" firstAttribute="bottom" secondItem="LM4-bd-HnP" secondAttribute="bottom" constant="-30" id="Aqp-Ng-s20"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LM4-bd-HnP" secondAttribute="trailing" id="E6E-RP-5zb"/>
-                <constraint firstItem="lrT-b4-0Id" firstAttribute="width" secondItem="LM4-bd-HnP" secondAttribute="width" multiplier="0.2" id="J2A-y0-Ptr"/>
+                <constraint firstItem="lrT-b4-0Id" firstAttribute="width" secondItem="LM4-bd-HnP" secondAttribute="width" multiplier="0.35" id="J2A-y0-Ptr"/>
                 <constraint firstItem="SOu-UV-15h" firstAttribute="bottom" secondItem="LM4-bd-HnP" secondAttribute="bottom" id="LnG-ij-tPU"/>
                 <constraint firstItem="LM4-bd-HnP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PiV-o1-Lmh"/>
                 <constraint firstItem="lrT-b4-0Id" firstAttribute="trailing" secondItem="LM4-bd-HnP" secondAttribute="trailing" constant="-10" id="Qn7-hs-dEM"/>

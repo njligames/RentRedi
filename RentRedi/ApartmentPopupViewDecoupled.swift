@@ -2,11 +2,10 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class ApartmentPopupViewDecoupled: UIView {//}, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ApartmentPopupViewDecoupled: UIView {
     @IBOutlet weak var carouselView: PhotoCarouselCollectionView!
     
     weak var delegate: RentRediPlusHomeVC?
-    var applicationPhotosUrls = [URL]()
     var tenantCardSubmission: TenantCardSubmission?
 
     @IBOutlet weak var applicationPopupTitle: UILabel!
@@ -88,7 +87,6 @@ class ApartmentPopupViewDecoupled: UIView {//}, UICollectionViewDelegate, UIColl
 
     //custom initializer
     func commonInit() {
-//        populateApplicationPhotosUrls()
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
         self.addSubview(view)
@@ -184,7 +182,7 @@ class ApartmentPopupViewDecoupled: UIView {//}, UICollectionViewDelegate, UIColl
 
     func fetchListingPhotos(ownerID: String, propertyID: String, unitID: String) {
         //reset photos
-        applicationPhotosUrls = []
+        self.carouselView.clearPhotos()
         //read from firebase the photos for listing
         DatabaseFunctions().readOnceFromFirebaseAndReturnJSON(pathToValue: "allUsers/ownerProfiles/\(ownerID)/profile/properties/\(propertyID)/units/\(unitID)/unitDetails/photos") { (apartmentPhotos) in
             //if photo urls were found
@@ -194,12 +192,12 @@ class ApartmentPopupViewDecoupled: UIView {//}, UICollectionViewDelegate, UIColl
                     let downloadURL = value["downloadURL"].stringValue
                     if let downloadURL = URL(string: downloadURL) {
                         //add url to array
-                        self.applicationPhotosUrls.append(downloadURL)
+                        self.carouselView.appendPhotoUrl(downloadURL)
                     }
                 }
                 self.showAndUpdateApplicationUnitAndPropertyPhotos()
             //else no listing photos found, show default photo
-            } else if apartmentPhotos.isEmpty && self.applicationPhotosUrls.isEmpty {
+            } else if apartmentPhotos.isEmpty && self.carouselView.numberOfPhotos() == 0 {
                 self.showDefaultApplicationInvite()
             }
         }
@@ -215,12 +213,12 @@ class ApartmentPopupViewDecoupled: UIView {//}, UICollectionViewDelegate, UIColl
                 for (_,value):(String, JSON) in propertyPhotos {
                     let downloadURL = value["downloadURL"].stringValue
                     if let downloadURL = URL(string: downloadURL) {
-                        self.applicationPhotosUrls.append(downloadURL)
+                        self.carouselView.appendPhotoUrl(downloadURL)
                     }
                 }
                 self.showAndUpdateApplicationUnitAndPropertyPhotos()
             //no listing or property photos were found, show default photo
-            } else if propertyPhotos.isEmpty && self.applicationPhotosUrls.isEmpty {
+            } else if propertyPhotos.isEmpty && self.carouselView.numberOfPhotos() == 0 {
                 self.showDefaultApplicationInvite()
             }
         }
@@ -228,7 +226,7 @@ class ApartmentPopupViewDecoupled: UIView {//}, UICollectionViewDelegate, UIColl
 
     func showAndUpdateApplicationUnitAndPropertyPhotos() {
         //if application photo urls is not empty
-        if !self.applicationPhotosUrls.isEmpty {
+        if self.carouselView.numberOfPhotos() != 0 {
             //Run on main thread
             DispatchQueue.main.async {
                 // show apartment photos collection view, dots and reload data

@@ -35,7 +35,6 @@ class PhotoCarouselCollectionView: UIView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        contentView.backgroundColor = .red
 
         //set the collection delegate and datasource of the photos to self(update collection view when Apartment Popup view data updates)
         applicationPopupPhotos.delegate = self

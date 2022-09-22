@@ -1,4 +1,6 @@
 # RentRedi Mobile Developer Skills Assessment Solution
+![CarouselEmbedded](https://user-images.githubusercontent.com/16603171/191843169-77298c05-9068-49ab-a080-ab35f2b09590.gif)
+
 
 In this exercise, I was able to successfully create an iOS project using the files that you provided.
 

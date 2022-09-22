@@ -25,7 +25,7 @@
 		C19E24C728DC02EA00CBAEDB /* ApartmentPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E24C528DC02EA00CBAEDB /* ApartmentPopupView.xib */; };
 		C1AEF0D128D9405700827D9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D028D9405700827D9D /* AppDelegate.swift */; };
 		C1AEF0D328D9405700827D9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D228D9405700827D9D /* SceneDelegate.swift */; };
-		C1AEF0D528D9405700827D9D /* ViewControllerDecoupled.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D428D9405700827D9D /* ViewControllerDecoupled.swift */; };
+		C1AEF0D528D9405700827D9D /* ViewControllerUsedInCurrentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AEF0D428D9405700827D9D /* ViewControllerUsedInCurrentComponent.swift */; };
 		C1AEF0D828D9405700827D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1AEF0D628D9405700827D9D /* Main.storyboard */; };
 		C1AEF0DA28D9405800827D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1AEF0D928D9405800827D9D /* Assets.xcassets */; };
 		C1AEF0DD28D9405800827D9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1AEF0DB28D9405800827D9D /* LaunchScreen.storyboard */; };
@@ -81,7 +81,7 @@
 		C1AEF0CD28D9405700827D9D /* RentRedi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentRedi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1AEF0D028D9405700827D9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1AEF0D228D9405700827D9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C1AEF0D428D9405700827D9D /* ViewControllerDecoupled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDecoupled.swift; sourceTree = "<group>"; };
+		C1AEF0D428D9405700827D9D /* ViewControllerUsedInCurrentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUsedInCurrentComponent.swift; sourceTree = "<group>"; };
 		C1AEF0D728D9405700827D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1AEF0D928D9405800827D9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1AEF0DC28D9405800827D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				C1AEF0D028D9405700827D9D /* AppDelegate.swift */,
 				C1AEF0D228D9405700827D9D /* SceneDelegate.swift */,
 				C1B7714A28DCB19A00F45494 /* ViewController.swift */,
-				C1AEF0D428D9405700827D9D /* ViewControllerDecoupled.swift */,
+				C1AEF0D428D9405700827D9D /* ViewControllerUsedInCurrentComponent.swift */,
 				C1AEF0D628D9405700827D9D /* Main.storyboard */,
 				C1AEF0D928D9405800827D9D /* Assets.xcassets */,
 				C1AEF0DB28D9405800827D9D /* LaunchScreen.storyboard */,
@@ -478,7 +478,7 @@
 			files = (
 				C1B7714B28DCB19A00F45494 /* ViewController.swift in Sources */,
 				C19E24C628DC02EA00CBAEDB /* ApartmentPopupView.swift in Sources */,
-				C1AEF0D528D9405700827D9D /* ViewControllerDecoupled.swift in Sources */,
+				C1AEF0D528D9405700827D9D /* ViewControllerUsedInCurrentComponent.swift in Sources */,
 				C197F13A28D9689D0072B99D /* PrequalifyHomeVC.swift in Sources */,
 				C1AEF10E28D9452100827D9D /* TenantCardSubmission.swift in Sources */,
 				C19E24C228DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.swift in Sources */,

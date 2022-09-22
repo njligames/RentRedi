@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		72C2A76F8464937FD02DA95D /* Pods_RentRedi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C86A335303072A7F7EFA00B /* Pods_RentRedi.framework */; };
 		AA61A25DBE1DD8E7B97E6BD0 /* Pods_RentRediTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA193AD68BCFE3DD4EBC646A /* Pods_RentRediTests.framework */; };
+		C11A8E7928DCCE7300B926C2 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A8E7828DCCE7300B926C2 /* MockNetworkManager.swift */; };
+		C11A8E7C28DCCF3900B926C2 /* images.json in Resources */ = {isa = PBXBuildFile; fileRef = C11A8E7B28DCCF3900B926C2 /* images.json */; };
+		C11A8E7F28DCD20D00B926C2 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A8E7E28DCD20D00B926C2 /* ImageModel.swift */; };
 		C13B898428D956CB00148A2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C13B898328D956CB00148A2E /* GoogleService-Info.plist */; };
 		C197F13228D963EF0072B99D /* DatabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13128D963EF0072B99D /* DatabaseFunctions.swift */; };
 		C197F13428D966890072B99D /* RentRediPlusHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197F13328D966890072B99D /* RentRediPlusHomeVC.swift */; };
@@ -65,6 +68,9 @@
 		215773D14BBA9D84D6D96B14 /* Pods-RentRedi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentRedi.debug.xcconfig"; path = "Target Support Files/Pods-RentRedi/Pods-RentRedi.debug.xcconfig"; sourceTree = "<group>"; };
 		7C86A335303072A7F7EFA00B /* Pods_RentRedi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentRedi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		961E1A08219932DF72732FC5 /* Pods-RentRedi-RentRediUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentRedi-RentRediUITests.release.xcconfig"; path = "Target Support Files/Pods-RentRedi-RentRediUITests/Pods-RentRedi-RentRediUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C11A8E7828DCCE7300B926C2 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		C11A8E7B28DCCF3900B926C2 /* images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = images.json; sourceTree = "<group>"; };
+		C11A8E7E28DCD20D00B926C2 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		C13B898328D956CB00148A2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C197F13128D963EF0072B99D /* DatabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFunctions.swift; sourceTree = "<group>"; };
 		C197F13328D966890072B99D /* RentRediPlusHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRediPlusHomeVC.swift; sourceTree = "<group>"; };
@@ -144,6 +150,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C11A8E7A28DCCECD00B926C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C11A8E7B28DCCF3900B926C2 /* images.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C11A8E7D28DCD10600B926C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C11A8E7E28DCD20D00B926C2 /* ImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C197F13028D963D70072B99D /* stubs */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +187,7 @@
 				C1AEF0E628D9405800827D9D /* RentRediTests */,
 				C1AEF0F028D9405800827D9D /* RentRediUITests */,
 				C1AEF0CE28D9405700827D9D /* Products */,
+				C11A8E7A28DCCECD00B926C2 /* Resources */,
 				A3E988F4D677C5389B03FA60 /* Pods */,
 				D0F2F8606D729C5D93ACB24D /* Frameworks */,
 			);
@@ -183,6 +206,7 @@
 		C1AEF0CF28D9405700827D9D /* RentRedi */ = {
 			isa = PBXGroup;
 			children = (
+				C11A8E7D28DCD10600B926C2 /* Model */,
 				C197F13028D963D70072B99D /* stubs */,
 				C13B898328D956CB00148A2E /* GoogleService-Info.plist */,
 				C19E24C428DC02EA00CBAEDB /* ApartmentPopupView.swift */,
@@ -190,6 +214,7 @@
 				C19E24C028DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.swift */,
 				C19E24C128DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.xib */,
 				C1AEF10428D9452100827D9D /* README.md */,
+				C11A8E7828DCCE7300B926C2 /* MockNetworkManager.swift */,
 				C1AEF10628D9452100827D9D /* TenantCardSubmission.swift */,
 				C1AEF0D028D9405700827D9D /* AppDelegate.swift */,
 				C1AEF0D228D9405700827D9D /* SceneDelegate.swift */,
@@ -345,6 +370,7 @@
 				C1AEF0DD28D9405800827D9D /* LaunchScreen.storyboard in Resources */,
 				C1AEF10828D9452100827D9D /* README.md in Resources */,
 				C19E24C728DC02EA00CBAEDB /* ApartmentPopupView.xib in Resources */,
+				C11A8E7C28DCCF3900B926C2 /* images.json in Resources */,
 				C1AEF0DA28D9405800827D9D /* Assets.xcassets in Resources */,
 				C1AEF0D828D9405700827D9D /* Main.storyboard in Resources */,
 				C19E24C328DBFF9400CBAEDB /* ApartmentPopupViewDecoupled.xib in Resources */,
@@ -489,8 +515,10 @@
 				C197F13228D963EF0072B99D /* DatabaseFunctions.swift in Sources */,
 				C197F13828D9681D0072B99D /* ApplyHomeVC.swift in Sources */,
 				C197F13628D967270072B99D /* roundedButton.swift in Sources */,
+				C11A8E7928DCCE7300B926C2 /* MockNetworkManager.swift in Sources */,
 				C1AEF0D128D9405700827D9D /* AppDelegate.swift in Sources */,
 				C197F13428D966890072B99D /* RentRediPlusHomeVC.swift in Sources */,
+				C11A8E7F28DCD20D00B926C2 /* ImageModel.swift in Sources */,
 				C1AEF0D328D9405700827D9D /* SceneDelegate.swift in Sources */,
 				C19E24BD28DBAA6600CBAEDB /* PhotoCarouselCollectionView.swift in Sources */,
 				C197F13E28D96A360072B99D /* String+Capitalize.swift in Sources */,
